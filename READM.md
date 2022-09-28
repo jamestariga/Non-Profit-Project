@@ -1,1 +1,0 @@
-# Shorinji Kempo BC Website
