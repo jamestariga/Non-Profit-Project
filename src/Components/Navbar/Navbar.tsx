@@ -1,9 +1,29 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import useEventListener from '../../hooks/useEventListener'
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false)
+
+  const handleScroll = () => {
+    if (window.innerWidth > 1020) {
+      if (window.scrollY > 20) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+  }
+
+  useEventListener('scroll', handleScroll)
+
   return (
     <>
-      <div className='navbar bg-base-100 px-12 py-8'>
+      <nav
+        className={`navbar py-6 fixed transition z-50 ${
+          isScrolled ? `bg-indigo-900` : `bg-base-100`
+        }`}
+      >
         <div className='navbar-start'>
           <div className='dropdown'>
             <label tabIndex={0} className='btn btn-ghost lg:hidden'>
@@ -56,22 +76,46 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className='text-3xl font-extrabold text-white'>Shorinji Kempo</a>
+          <a className='text-4xl font-extrabold text-white ml-4 xl:ml-12'>
+            Shorinji Kempo
+          </a>
         </div>
-        <div className='navbar-end hidden lg:flex'>
-          <ul className='menu menu-horizontal p-0'>
+        <div className='navbar-center hidden lg:flex lg:justify-center lg:w-1/2'>
+          <ul className='menu menu-horizontal p-0 text-xl font-bold space-x-6'>
             <li>
-              <Link to='/'>Home</Link>
+              <NavLink
+                to='/'
+                className={({ isActive }) =>
+                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                }
+                end
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <NavLink
+                to='/about'
+                className={({ isActive }) =>
+                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                }
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <Link to='/FAQ'>FAQ</Link>
+              <NavLink
+                to='/FAQ'
+                className={({ isActive }) =>
+                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                }
+              >
+                FAQ
+              </NavLink>
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
     </>
   )
 }
