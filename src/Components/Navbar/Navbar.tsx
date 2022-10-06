@@ -21,7 +21,7 @@ const Navbar = () => {
     <>
       <nav
         className={`navbar py-6 fixed transition z-50 ${
-          isScrolled ? `bg-indigo-900` : `bg-base-100`
+          isScrolled ? `bg-red-700` : `bg-base-100`
         }`}
       >
         <div className='navbar-start'>
@@ -86,7 +86,7 @@ const Navbar = () => {
               <NavLink
                 to='/'
                 className={({ isActive }) =>
-                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                  isActive ? `bg-red-500 text-white` : `text-gray-200`
                 }
                 end
               >
@@ -97,7 +97,7 @@ const Navbar = () => {
               <NavLink
                 to='/about'
                 className={({ isActive }) =>
-                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                  isActive ? `bg-red-500 text-white` : `text-gray-200`
                 }
               >
                 About
@@ -107,7 +107,7 @@ const Navbar = () => {
               <NavLink
                 to='/FAQ'
                 className={({ isActive }) =>
-                  isActive ? `bg-blue-700 text-white` : `text-gray-400`
+                  isActive ? `bg-red-500 text-white` : `text-gray-200`
                 }
               >
                 FAQ
