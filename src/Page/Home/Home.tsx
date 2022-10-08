@@ -1,3 +1,5 @@
+import Location from '../../Components/Location'
+
 const headerPic = new URL('/images/1.jpg', import.meta.url).href
 const programPic = new URL('/images/6.jpg', import.meta.url).href
 const benefitPic = new URL('/images/20.jpg', import.meta.url).href
@@ -65,6 +67,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Location />
     </>
   )
 }
