@@ -7,6 +7,7 @@ import {
 import Layout from './Components/Layout'
 import Home from './Page/Home'
 import About from './Page/About'
+import FAQ from './Page/FAQ'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -14,6 +15,7 @@ const App = () => {
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/faq' element={<FAQ />} />
       </Route>
     )
   )
