@@ -23,7 +23,7 @@ const FAQ = () => {
           className='input input-bordered border-4 w-full max-w-lg text-white'
         />
       </header>
-      <section className='flex flex-col items-center justify-center gap-8 px-8'>
+      <section className='flex flex-col items-center justify-center gap-8 px-8 pb-10'>
         {Data.map(({ id, title, description }: mapTypes) => (
           <div
             key={id}
