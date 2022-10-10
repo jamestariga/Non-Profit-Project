@@ -1,12 +1,11 @@
 import Instructor from '../../Components/Instructor'
-
-const headerPic = new URL('/images/1.jpg', import.meta.url).href
+import headerPic from '/images/1.jpg'
 
 const About = () => {
   return (
     <>
-      <header className='flex flex-col gap-4 items-center justify-center space-y-10 pb-8'>
-        <div className='flex flex-col justify-center items-center space-y-6 w-1/2'>
+      <header className='flex flex-col gap-4 items-center justify-center space-y-10 pb-8 px-10'>
+        <div className='flex flex-col justify-center items-center space-y-6 xl:w-3/5'>
           <div className='flex items-center justify-center w-full'>
             <div className='rounded-2xl overflow-hidden transition-all'>
               <img className='w-full max-w-7xl' src={headerPic} alt='' />
