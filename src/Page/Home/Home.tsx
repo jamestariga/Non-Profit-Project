@@ -2,6 +2,7 @@ import { useState } from 'react'
 import useEventListener from '../../hooks/useEventListener'
 import Location from '../../Components/Location'
 import Carousel from '../../Components/Carousel'
+import Contact from '../../Components/Contact'
 
 import programPic from '/images/6.jpg'
 import benefitPic from '/images/20.jpg'
@@ -80,6 +81,7 @@ const Home = () => {
         </div>
       </section>
       <Location />
+      <Contact />
     </>
   )
 }
