@@ -1,13 +1,27 @@
+import { useState } from 'react'
+import useEventListener from '../../hooks/useEventListener'
 import Location from '../../Components/Location'
+import Carousel from '../../Components/Carousel'
 
-const headerPic = new URL('/images/1.jpg', import.meta.url).href
-const programPic = new URL('/images/6.jpg', import.meta.url).href
-const benefitPic = new URL('/images/20.jpg', import.meta.url).href
+import programPic from '/images/6.jpg'
+import benefitPic from '/images/20.jpg'
 
 const Home = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(true)
+
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === 'visible') {
+      setIsVisible(true)
+    } else {
+      setIsVisible(false)
+    }
+  }
+
+  useEventListener('visibilitychange', handleVisibilityChange)
+
   return (
     <>
-      <header className='flex flex-col gap-4 items-center justify-center space-y-10 px-6 lg:px-10 w-full h-full'>
+      <header className='flex flex-col gap-4 items-center justify-center space-y-10 pb-8 px-6 lg:px-10 w-full h-full'>
         <div className='flex flex-col items-center justify-center space-y-8 w-full'>
           <h1 className='text-4xl lg:text-6xl text-center font-bold text-white'>
             Kempo For Kids & Youth Program
@@ -19,10 +33,8 @@ const Home = () => {
             Sign Up
           </button>
         </div>
-        <div className='flex items-center justify-center w-full'>
-          <div className='rounded-2xl overflow-hidden transition-all'>
-            <img className='w-full max-w-7xl' src={headerPic} alt='' />
-          </div>
+        <div className='flex items-center justify-center md:w-3/4'>
+          <Carousel isVisible={isVisible} />
         </div>
       </header>
       <section className='px-10 pb-10 flex flex-col justify-center items-center'>
