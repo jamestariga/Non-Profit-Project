@@ -1,5 +1,5 @@
-const instructor1 = new URL('/images/instructor1.jpg', import.meta.url).href
-const instructor2 = new URL('/images/instructor2.jpg', import.meta.url).href
+import instructor1 from '/images/instructor1.jpg'
+import instructor2 from '/images/instructor2.jpg'
 
 const Instructor = () => {
   return (
