@@ -72,7 +72,10 @@ const Carousel = (prop: CarouselProps) => {
   }
 
   return (
-    <Carousels {...carouselOptions()}>
+    <Carousels
+      {...carouselOptions()}
+      className='flex flex-col justify-center items-center w-full md:w-3/4'
+    >
       {Data.map(({ id, image }: mapTypes) => (
         <div key={id} className='px-4'>
           <div className='flex justify-center gap-10 space-x-10 w-full min-h-[5rem] h-[15rem] md:h-[25rem] xl:h-[40rem] overflow-hidden cursor-pointer rounded-xl'>
