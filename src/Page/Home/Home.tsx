@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <header className='flex flex-col gap-4 items-center justify-center space-y-10 pb-8 px-6 lg:px-10 w-full h-full'>
+      <header className='flex flex-col gap-4 md:items-center justify-center space-y-10 pb-8 px-6 lg:px-10 w-full h-full'>
         <div className='flex flex-col items-center justify-center space-y-8 w-full'>
           <h1 className='text-4xl lg:text-6xl text-center font-bold text-white'>
             Kempo For Kids & Youth Program
@@ -34,11 +34,9 @@ const Home = () => {
             Sign Up
           </button>
         </div>
-        <div className='flex items-center justify-center md:w-3/4'>
-          <Carousel isVisible={isVisible} />
-        </div>
+        <Carousel isVisible={isVisible} />
       </header>
-      <section className='px-10 pb-10 flex flex-col justify-center items-center'>
+      <section className='px-10 pb-10 w-full flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-center items-center space-y-6 lg:w-4/5 xl:w-3/5'>
           <h2 className='text-4xl text-center leading-loose text-white font-bold'>
             Welcome to the BC Shorinji Kempo Community!
