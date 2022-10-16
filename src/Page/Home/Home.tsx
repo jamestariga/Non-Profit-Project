@@ -54,8 +54,10 @@ const Home = () => {
               <img src={programPic} alt='' className='rounded-2xl' />
             </div>
             <div className='md:w-1/2 flex flex-col justify-center items-center space-y-8'>
-              <h2 className='text-white text-2xl font-bold'>The Program</h2>
-              <p className='text-white text-base md:text-lg leading-loose'>
+              <h2 className='text-white text-2xl 4xl:text-4xl font-bold'>
+                The Program
+              </h2>
+              <p className='text-white text-base md:text-lg 4xl:text-xl leading-loose'>
                 Train, learn and grow. Our Youth Classes go further than
                 physical fitness. Participants also develop interpersonal skills
                 under the mentorship of a certified Youth Coach.
@@ -64,8 +66,10 @@ const Home = () => {
           </div>
           <div className='flex flex-col md:flex-row justify-start items-center gap-10 overflow-hidden md:p-8'>
             <div className='md:w-1/2 flex flex-col justify-center items-center space-y-8'>
-              <h2 className='text-white text-2xl font-bold'>Benefits</h2>
-              <p className='text-white text-base md:text-lg leading-loose'>
+              <h2 className='text-white text-2xl 4xl:text-4xl font-bold'>
+                Benefits
+              </h2>
+              <p className='text-white text-base md:text-lg 4xl:text-xl leading-loose'>
                 Designed to reinforce a positive, motivated mentality, our
                 classes teach Youth to never give up. Develop strong athletic
                 skills while improving self-esteem, discipline, classroom
