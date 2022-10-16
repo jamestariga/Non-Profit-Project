@@ -1,4 +1,5 @@
 import Instructor from '../../Components/Instructor'
+import Information from '../../Components/Information'
 import headerPic from '/images/1.jpg'
 
 const About = () => {
@@ -35,6 +36,7 @@ const About = () => {
           </p>
         </div>
       </header>
+      <Information />
       <Instructor />
     </>
   )
